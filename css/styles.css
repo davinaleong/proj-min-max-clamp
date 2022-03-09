@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --color-dark-grey: #212121;
+    --color-light-grey: #EEEEEE;
+    --color-yellow: #FFEB3B;
+    --color-orange: #FF9800;
+    --color-blue-grey: #607D8B;
+}
+
+body {
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-light-grey);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1em;
+}
+
+main {
+    background: var(--color-dark-grey);
+    color: var(--color-light-grey);
+    box-shadow: 5px 5px 10px 0 rgba(128, 128, 128, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: max(300px, 80vw);
+    padding: 1em;
+    gap: clamp(1rem, 1rem + 10vw, 1.5rem);
+}
+
+h1 {
+    color: var(--color-orange);
+    font-weight: normal;
+    font-size: clamp(3rem, 5vw + 1rem, 7rem);
+    line-height: 1;
+}
+
+p {
+    font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
+    line-height: 1.5;
+}
