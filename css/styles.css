@@ -7,42 +7,81 @@
 }
 
 :root {
-    --color-dark-grey: #212121;
-    --color-light-grey: #EEEEEE;
-    --color-orange: #FF9800;
+  --color-dark-grey: #212121;
+  --color-light-grey: #eeeeee;
+  --color-mid-grey: #999;
+  --color-orange: #ff9800;
+  --color-yellow: #ffeb3b;
+  --color-box-shadow: rgba(0, 0, 0, 0.5);
 }
 
 body {
-    font-size: 16px;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--color-light-grey);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 1em;
+  font-size: 16px;
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-mid-grey);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: max(1rem, 1vw + 1rem);
 }
 
 main {
-    background: var(--color-dark-grey);
-    color: var(--color-light-grey);
-    box-shadow: 5px 5px 10px 0 rgba(128, 128, 128, 0.5);
-    display: flex;
-    flex-direction: column;
-    width: max(300px, 80vw);
-    padding: 1em;
-    gap: clamp(1rem, 1rem + 10vw, 1.5rem);
+  background: var(--color-dark-grey);
+  color: var(--color-light-grey);
+  box-shadow: 0 0 15px 0 var(--color-box-shadow);
+  display: flex;
+  flex-direction: column;
+  width: max(300px, 60vw);
+  padding: max(1rem, 1vw + 1rem);
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--color-yellow);
+}
+
+strong,
+em {
+  color: var(--color-yellow);
+}
+
+a,
+a:visited,
+a:active {
+  color: var(--color-dark-grey);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-yellow);
 }
 
 h1 {
-    color: var(--color-orange);
-    font-weight: 600;
-    font-size: clamp(3rem, 5vw + 1rem, 7rem);
-    line-height: 1;
+  color: var(--color-orange);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw + 0.2rem, 5rem);
+  line-height: 1;
+  margin-bottom: clamp(1rem, 1rem + 10vw, 1.5rem);
 }
 
 p {
-    font-size: clamp(1.5rem, 1vw + 1rem, 2rem);
-    line-height: 1.5;
+  font-size: clamp(1rem, 1vw + 0.2rem, 2rem);
+  line-height: 1.5;
+  margin-bottom: clamp(0.5rem, 0.5rem + 10vw, 1rem);
+}
+
+.github {
+  display: block;
+  font-size: 3rem;
+  padding: 2vw 2vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  text-shadow: 0 0 5px var(--color-box-shadow);
 }
