@@ -9,9 +9,7 @@
 :root {
     --color-dark-grey: #212121;
     --color-light-grey: #EEEEEE;
-    --color-yellow: #FFEB3B;
     --color-orange: #FF9800;
-    --color-blue-grey: #607D8B;
 }
 
 body {
@@ -39,7 +37,7 @@ main {
 
 h1 {
     color: var(--color-orange);
-    font-weight: normal;
+    font-weight: 600;
     font-size: clamp(3rem, 5vw + 1rem, 7rem);
     line-height: 1;
 }
